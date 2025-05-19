@@ -1,0 +1,22 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@credit.edit.headline">Edit Credit</h1>
+    <div>
+        <a routerLink="/credits" class="btn btn-secondary" i18n="@@credit.edit.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="editForm" (ngSubmit)="handleSubmit()">
+    <input type="submit" i18n-value="@@credit.edit.headline" value="Edit Credit" class="btn btn-primary mt-4 mb-4" />
+    <app-input-row [group]="editForm" field="id" rowType="number" i18n-label="@@credit.id.label" label="Id" />
+    <app-input-row [group]="editForm" field="creditType" i18n-label="@@credit.creditType.label" label="Credit Type" />
+    <app-input-row [group]="editForm" field="dateDemande" rowType="datepicker" i18n-label="@@credit.dateDemande.label" label="Date Demande" />
+    <app-input-row [group]="editForm" field="statut" i18n-label="@@credit.statut.label" label="Statut" />
+    <app-input-row [group]="editForm" field="dateAcceptation" rowType="datepicker" i18n-label="@@credit.dateAcceptation.label" label="Date Acceptation" />
+    <app-input-row [group]="editForm" field="montant" i18n-label="@@credit.montant.label" label="Montant" />
+    <app-input-row [group]="editForm" field="dureeRemboursement" rowType="number" i18n-label="@@credit.dureeRemboursement.label" label="Duree Remboursement" />
+    <app-input-row [group]="editForm" field="tauxInteret" i18n-label="@@credit.tauxInteret.label" label="Taux Interet" />
+    <app-input-row [group]="editForm" field="motif" i18n-label="@@credit.motif.label" label="Motif" />
+    <app-input-row [group]="editForm" field="typeBien" i18n-label="@@credit.typeBien.label" label="Type Bien" />
+    <app-input-row [group]="editForm" field="raisonSociale" i18n-label="@@credit.raisonSociale.label" label="Raison Sociale" />
+    <app-input-row [group]="editForm" field="client" rowType="select" [options]="clientValues" i18n-label="@@credit.client.label" label="Client" />
+    <input type="submit" i18n-value="@@credit.edit.headline" value="Edit Credit" class="btn btn-primary mt-4" />
+</form>
